@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using static System.Console;
 
-namespace DesignPattersn
+namespace DesignPattern
 {
 	public class journal
 	{
