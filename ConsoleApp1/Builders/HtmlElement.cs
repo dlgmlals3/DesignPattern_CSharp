@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPattern
 {
-	class HtmlElement
+	public class HtmlElement
 	{
 		public string Name, Text;
 		public List<HtmlElement> Elements = new List<HtmlElement>();
@@ -29,10 +29,13 @@ namespace DesignPattern
 				sb.Append(new string(' ', indentSize * (indent + 1)));
 				sb.AppendLine(Text);
 			}
+			
+			// recursive 하게 처리 가능하도록 함.
 			foreach (var e in Elements)
 			{
 				sb.Append(e.ToStringImpl(indent + 1));
 			}
+
 			sb.AppendLine($"{i}</{Name}>");
 			return sb.ToString();
 		}
@@ -53,10 +56,11 @@ namespace DesignPattern
 			this.rootName = rootName;
 		}
 
-		public void AddChild(string childName, string childText)
+		public HtmlBuilder AddChild(string childName, string childText)
 		{
 			var e = new HtmlElement(childName, childText);
 			root.Elements.Add(e);
+			return this;
 		}
 
 		public override string ToString()

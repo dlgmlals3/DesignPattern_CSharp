@@ -1,5 +1,7 @@
 ﻿
 using static System.Console;
+using DesignPattern_Builder;
+using System;
 
 namespace DesignPattern
 {
@@ -13,9 +15,28 @@ namespace DesignPattern
 		public static void builder_1()
 		{
 			var builder = new HtmlBuilder("ul");
-			builder.AddChild("li", "hello");
-			builder.AddChild("li", "world");
+			builder.AddChild("li", "hello").AddChild("li", "world");			
 			WriteLine(builder.ToString());
+		}
+
+		
+	}
+}
+
+namespace DesignPattern_Builder
+{
+	class fluentBuilder
+	{
+
+		public static void builder_fluentBuilder_2()
+		{
+			var me = Person.New
+				.Called("dlgmlals3")
+				.WorksAsA("quant")
+				.Build();
+			Console.WriteLine(me);
+			PersonJobBuilder<Person.Builder> personJobBuilder = Person.New.Called("dlgmlals3");
+			Console.WriteLine(me);
 		}
 	}
 }
