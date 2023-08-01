@@ -18,7 +18,9 @@ namespace DesignPattern
 			//Solid_Patterns.DependentInversion_5();
 
 			//Builder.builder_1();
-			fluentBuilder.builder_fluentBuilder_2();
+			//fluentBuilder.builder_fluentBuilder_2();
+			StepWiseBuilder.Test();
+
 		}
 	}
 }
