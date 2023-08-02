@@ -6,7 +6,7 @@ using static System.Console;
 using DesignPattern_Builder;
 using DesignPattern_FunctionBuilder;
 using GrammarCSharp;
-
+using GrammarCSharp_Event;
 namespace DesignPattern
 {
 	class Program
@@ -25,7 +25,8 @@ namespace DesignPattern
 			//FunctionalBuilder.Test();
 
 			//DelegateGrammar.Test();
-			DelegateGrammar.MultiTest();
+			//DelegateGrammar.MultiTest();
+			EventTest.Test();
 		}
 	}
 }
