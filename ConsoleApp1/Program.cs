@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using static System.Console;
 using DesignPattern_Builder;
+using DesignPattern_FunctionBuilder;
 
 namespace DesignPattern
 {
@@ -19,7 +20,8 @@ namespace DesignPattern
 
 			//Builder.builder_1();
 			//fluentBuilder.builder_fluentBuilder_2();
-			StepWiseBuilder.Test();
+			//StepWiseBuilder.Test();
+			FunctionalBuilder.Test();
 
 		}
 	}

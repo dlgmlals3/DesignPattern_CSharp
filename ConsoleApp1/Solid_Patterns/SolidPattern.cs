@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using static System.Console;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DesignPattern
 {
@@ -14,7 +14,7 @@ namespace DesignPattern
 			var j = new journal();
 			j.AddEntry("dlgmlals3");
 			j.AddEntry("dlgmlals4");
-			WriteLine(j);
+			Console.WriteLine(j);
 
 			var p = new Persistence();
 			var filename = @"c:\Temp\journal.txt";
@@ -29,10 +29,10 @@ namespace DesignPattern
 			var house = new Product("dlgmlals3", Color.Blue, Size.Medium);
 			Product[] products = { apple, tree, house };
 			var pf = new ProductFilter();
-			WriteLine("Green Products (old): ");
+			Console.WriteLine("Green Products (old): ");
 			foreach (var p in pf.FilterByColor(products, Color.Green))
 			{
-				WriteLine($" - {p.Name} is green");
+				Console.WriteLine($" - {p.Name} is green");
 			}
 		}
 
@@ -44,15 +44,15 @@ namespace DesignPattern
 			Product[] products = { apple, tree, house };
 
 			var bf = new BetterFilter();
-			WriteLine("Green Products (new)");
+			Console.WriteLine("Green Products (new)");
 			foreach (var p in bf.Filter(
-				products, 
+				products,
 				new AndSpecification<Product>(
 					new ColorSpecification(Color.Blue),
 					new SizeSpecification(Size.Medium)
 				)))
 			{
-				WriteLine($" - {p.Name} is Blue & Medium");
+				Console.WriteLine($" - {p.Name} is Blue & Medium");
 			}
 		}
 
@@ -60,11 +60,11 @@ namespace DesignPattern
 		public static void Sustitution_4()
 		{
 			Rectangle rc = new Rectangle(2, 3);
-			WriteLine($"{rc} has area {Area(rc)}");
+			Console.WriteLine($"{rc} has area {Area(rc)}");
 
 			Rectangle sq = new Square();
 			sq.Width = 4;
-			WriteLine($"{sq} has area {Area(sq)}");
+			Console.WriteLine($"{sq} has area {Area(sq)}");
 		}
 
 		public class Research
@@ -74,7 +74,7 @@ namespace DesignPattern
 			{
 				foreach (var p in browser.FindAllChildrenOf("John"))
 				{
-					WriteLine($"John has a child {p.Name} ");
+					Console.WriteLine($"John has a child {p.Name} ");
 				}
 			}
 		}
@@ -90,5 +90,4 @@ namespace DesignPattern
 			new Research(relationships);
 		}
 	}
-
 }
