@@ -26,7 +26,8 @@ namespace DesignPattern
 
 			//DelegateGrammar.Test();
 			//DelegateGrammar.MultiTest();
-			EventTest.Test();
+			//EventTest.Test();
+			EventTest.AnonymouseTest();
 		}
 	}
 }
