@@ -26,8 +26,12 @@ namespace DesignPattern
 
 			//DelegateGrammar.Test();
 			//DelegateGrammar.MultiTest();
+
 			//EventTest.Test();
-			EventTest.AnonymouseTest();
+			//EventTest.AnonymouseTest();
+			//EventTest.LamdaTest();
+			EventTest.InlineLambdaTest();
+
 		}
 	}
 }

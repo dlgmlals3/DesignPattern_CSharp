@@ -9,9 +9,10 @@ namespace GrammarCSharp_Event
 	class Subscriber
 	{
 		// target method (event handler)
-		public void Add(int a, int b)
+		public int Add(int a, int b)
 		{
 			Console.WriteLine(a + b);
+			return a + b;
 		}
 
 	}
