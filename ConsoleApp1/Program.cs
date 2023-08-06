@@ -30,8 +30,12 @@ namespace DesignPattern
 			//EventTest.Test();
 			//EventTest.AnonymouseTest();
 			//EventTest.LamdaTest();
-			EventTest.InlineLambdaTest();
-
+			//EventTest.InlineLambdaTest();
+			//EventTest.FuncTest();
+			//EventTest.ActionTest();
+			//EventTest.PredicateTest();
+			var eventTest = new EventTest();
+			eventTest.EventHandlerTest();
 		}
 	}
 }
