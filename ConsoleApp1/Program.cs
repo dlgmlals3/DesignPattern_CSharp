@@ -34,8 +34,9 @@ namespace DesignPattern
 			//EventTest.FuncTest();
 			//EventTest.ActionTest();
 			//EventTest.PredicateTest();
-			var eventTest = new EventTest();
-			eventTest.EventHandlerTest();
+			//new EventTest().EventHandlerTest();
+			new ExpressionGrammar().ExpressionTest();
+			new ExpressionGrammar().ExpressionBodyTest();
 		}
 	}
 }
