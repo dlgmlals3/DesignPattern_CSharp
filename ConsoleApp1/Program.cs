@@ -7,10 +7,15 @@ using DesignPattern_Builder;
 using DesignPattern_FunctionBuilder;
 using GrammarCSharp;
 using GrammarCSharp_Event;
+using Grammar.LINQ;
 namespace DesignPattern
 {
 	class Program
 	{
+		public static void LinqTest()
+		{
+			new LINQ().Test();
+		}
 		static void Main(string[] args)
 		{
 			//Solid_Patterns.Structure_1();	
@@ -35,8 +40,11 @@ namespace DesignPattern
 			//EventTest.ActionTest();
 			//EventTest.PredicateTest();
 			//new EventTest().EventHandlerTest();
-			new ExpressionGrammar().ExpressionTest();
-			new ExpressionGrammar().ExpressionBodyTest();
+			//new ExpressionGrammar().ExpressionTest();
+			//new ExpressionGrammar().ExpressionBodyTest();
+			//new SwitchExpression().Test();
+
+			LinqTest();
 		}
 	}
 }
