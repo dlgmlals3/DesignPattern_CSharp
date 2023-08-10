@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPattern_FunctionBuilder
+namespace DesignPattern.Builder
 {
 	public class Person
 	{

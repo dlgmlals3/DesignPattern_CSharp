@@ -33,6 +33,7 @@ namespace Grammar.LINQ
 				new Employee() { EmpID = 104, EmpName = "D", Job = "Manager", City = "PP"},
 				new Employee() { EmpID = 105, EmpName = "E", Job = "Manager", City = "JJ"}
 			};
+
 			// 람다식 사용. 
 			// 리턴타입.
 			IEnumerable<Employee> result = employees.Where(emp => (emp.Job == "Manager"));
