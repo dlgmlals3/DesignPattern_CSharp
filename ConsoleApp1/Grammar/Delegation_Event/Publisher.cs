@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammar.Delegation
+namespace Grammar.Delegation.Publisher
 {
 	// delegate type
 	public delegate int MyDelegateType(int a, int b);

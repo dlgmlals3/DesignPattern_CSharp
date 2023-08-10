@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using static System.Console;
 using DesignPattern.Builder;
-
+using Grammar.Delegation.Publisher;
 using DesignPattern.Builder.FluentBuilder;
 using Grammar.Delegation;
 using Grammar.LINQ;
@@ -20,6 +20,8 @@ namespace DesignPattern
 		public static void Grammar_LinqTest()
 		{
 			new LINQ().Test();
+			new LINQ().OrderTest();
+			new LINQ().FirstOrDefulat();
 		}
 
 		public static void Grammar_EventTest() {
