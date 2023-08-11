@@ -19,9 +19,14 @@ namespace DesignPattern
 
 		public static void Grammar_LinqTest()
 		{
-			new LINQ().Test();
-			new LINQ().OrderTest();
-			new LINQ().FirstOrDefulat();
+			LINQ.Test();
+			LINQ.OrderTest();
+			LINQ.FirstOrDefulat();
+			LINQ.Last_LastOrDefault();
+			LINQ.ElementAtOrDefault();
+			LINQ.SingleOrDefault();
+			LINQ.Select();
+			LINQ.MinMax();
 		}
 
 		public static void Grammar_EventTest() {
