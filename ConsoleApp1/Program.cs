@@ -8,15 +8,23 @@ using Grammar.Delegation.Publisher;
 using DesignPattern.Builder.FluentBuilder;
 using Grammar.Delegation;
 using Grammar.LINQ;
+using Grammar.Generic;
+
 namespace DesignPattern
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			Grammar_LinqTest();
+			Grammar_Generic();
 		}
-
+		public static void Grammar_Generic()
+		{
+			Generic.Test();
+			Generic.MultiGenericTest();
+			Generic.ConstraintTest();
+			Generic.GenericMethodTest();
+		}
 		public static void Grammar_LinqTest()
 		{
 			LINQ.Test();
