@@ -248,6 +248,13 @@ namespace Grammar.LINQ
 			double sum = employees.Sum(emp => emp.Salary);
 			double avg = employees.Average(emp => emp.Salary);
 			double cnt = employees.Count();
+
+			List<int> intList = new List<int>()
+			{
+			  5, 10, 20
+			};
+			int salarySum = intList.Aggregate((i1, i2) => { return i1 + i2; });
+			Console.WriteLine("SalarySum : " + salarySum);
 			Console.WriteLine(min + " " + max + " " + sum + " " + avg + " " + cnt);
 		}
 	}

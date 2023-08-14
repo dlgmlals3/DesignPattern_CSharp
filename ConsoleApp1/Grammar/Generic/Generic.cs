@@ -75,6 +75,7 @@ namespace Grammar.Generic
 		/// where T : class Name
 		/// where T : interface Name
 		/// where T : new()
+		///  new()는 매개 변수가 없는 기본 생성자를 가지는 형식에 대한 제약 조건이다
 		/// </summary>
 		public static void ConstraintTest()
 		{

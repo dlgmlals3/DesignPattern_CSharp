@@ -11,31 +11,33 @@ namespace DesignPattern.Builder
 		public string Name, Position;
 	}
 
-	public sealed class PersonBuilder
+	public abstract class FunctionalBuilder<TSubject, TSelf>
+		where TSelf : FunctionalBuilder<TSubject, TSelf>
+		where TSubject : new()
 	{
 		private readonly List<Func<Person, Person>> actions =
 		  new List<Func<Person, Person>>();
-		
-		// p 변수가 action 함수의 input인 Person class 타입이다.
-		public PersonBuilder Called(string name)
-		=> Do(p => { p.Name = name; });
 
 		// Action 키워드는 리턴값이 없는 함수 포인터와 같음
 		// Person 하나만 Input 으로 들어간다.
-		public PersonBuilder Do(Action<Person> action)
-		=> AddAction(action);
+		public TSelf Do(Action<Person> action) => AddAction(action);
 
-		public Person Build()
-			=> actions.Aggregate(new Person(), (p, k) => k(p));
+		// new Person() 초기값 
+		// 함수 포인터에서 p는 new Person() 가리키는 듯? 
+		// k는 actions list type
+		public Person Build() => actions.Aggregate(new Person(), (p, k) => k(p));
 
-		private PersonBuilder AddAction(Action<Person> action)
+		private TSelf AddAction(Action<Person> action)
 		{
-			// => 람다식
-			// 람다식 받을 변수 = (input) => ( 함수 내용 )
-			// p를 input으로 받고 p는 action 함수에 인자값이니, Person 이된다.
+			Console.WriteLine("AddActions");
 			actions.Add(p => { action(p); return p; });
-			return this;
-		}	
+			return (TSelf) this;
+		}
+	}
+
+	public sealed class PersonBuilder : FunctionalBuilder<Person, PersonBuilder>
+	{
+		public PersonBuilder Called(string name) => Do(p => p.Name = name);
 	}
 
 	public static class PersonBuilderExtensions
@@ -44,6 +46,7 @@ namespace DesignPattern.Builder
 			(this PersonBuilder builder, string position)
 			=> builder.Do(p => p.Position = position);
 	}
+
 	class FunctionalBuilder
 	{
 		public static void Test()

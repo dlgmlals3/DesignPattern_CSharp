@@ -27,8 +27,7 @@ namespace ConsoleApp1
 	}
 	
 
-	public class ChildAttribute<T> : BaseAttribute<T>
-		where T : new()
+	public class ChildAttribute<T> : BaseAttribute<T>		
 	{
 		public T ChildValue { 
 			get { return childValue; } 
@@ -52,7 +51,6 @@ namespace ConsoleApp1
 	}
 
 	public class GrandChildAttribute<T> : ChildAttribute<T>
-		where T: new()
 	{
 		public T ChildValue { get { return childValue; } }
 		private T childValue;

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using static System.Console;
 using DesignPattern.Builder;
+using DesignPattern.Builder.FacetedBuilder;
 using Grammar.Delegation.Publisher;
 using DesignPattern.Builder.FluentBuilder;
 using Grammar.Delegation;
@@ -16,8 +17,10 @@ namespace DesignPattern
 	{
 		static void Main(string[] args)
 		{
-			Grammar_Generic();
+			DesignPattern_Builder();
 		}
+
+		#region Grammar
 		public static void Grammar_Generic()
 		{
 			Generic.Test();
@@ -52,13 +55,17 @@ namespace DesignPattern
 			new ExpressionGrammar().ExpressionBodyTest();
 			new SwitchExpression().Test();
 		}
+		#endregion
 
+		#region Patterns
 		public static void DesignPattern_Builder()
 		{
 			DesignPattern.Builder.Builder.builder_1();
 			FluentBuilder.builder_fluentBuilder_2();
 			StepWiseBuilder.Test();
 			FunctionalBuilder.Test();
+			FacetedBuilder.Test();
+
 		}
 
 		public static void DesignPattern_SolidPattern()
@@ -69,6 +76,6 @@ namespace DesignPattern
 			Solid_Patterns.Sustitution_4();
 			Solid_Patterns.DependentInversion_5();
 		}
-
+		#endregion
 	}
 }
