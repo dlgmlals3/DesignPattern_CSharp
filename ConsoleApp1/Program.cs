@@ -5,19 +5,21 @@ using System.IO;
 using static System.Console;
 using DesignPattern.Builder;
 using DesignPattern.Builder.FacetedBuilder;
-using Grammar.Delegation.Publisher;
 using DesignPattern.Builder.FluentBuilder;
+using DesignPattern.Factory;
+using DesignPattern.Factory.FactoryClass;
+
+using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
 using Grammar.LINQ;
 using Grammar.Generic;
-
 namespace DesignPattern
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			DesignPattern_Builder();
+			DesignPattern_Factory();
 		}
 
 		#region Grammar
@@ -58,6 +60,14 @@ namespace DesignPattern
 		#endregion
 
 		#region Patterns
+
+		public static void DesignPattern_Factory()
+		{
+			FactoryMethod.Test();
+			FactoryAsync.Test();
+			FactoryClass.Test();
+			TrackingObject.Test();
+		}
 		public static void DesignPattern_Builder()
 		{
 			DesignPattern.Builder.Builder.builder_1();
