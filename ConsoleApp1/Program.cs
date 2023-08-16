@@ -8,6 +8,9 @@ using DesignPattern.Builder.FacetedBuilder;
 using DesignPattern.Builder.FluentBuilder;
 using DesignPattern.Factory;
 using DesignPattern.Factory.FactoryClass;
+using DesignPatterns.Factory.AbstractFactory;
+using DesignPatterns.Factory.OCP;
+using DesignPatterns.Factory.Assignment;
 
 using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
@@ -67,7 +70,11 @@ namespace DesignPattern
 			FactoryAsync.Test();
 			FactoryClass.Test();
 			TrackingObject.Test();
-		}
+			AbstractFactory.Test();
+			//OOPFactory.Test();
+			Assignment.Test();
+		} 
+
 		public static void DesignPattern_Builder()
 		{
 			DesignPattern.Builder.Builder.builder_1();
