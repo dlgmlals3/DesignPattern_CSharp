@@ -11,6 +11,8 @@ using DesignPattern.Factory.FactoryClass;
 using DesignPatterns.Factory.AbstractFactory;
 using DesignPatterns.Factory.OCP;
 using DesignPatterns.Factory.Assignment;
+using DesignPatterns.ProtoType;
+using DesignPatterns.ProtoType.DeepCopy;
 
 using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
@@ -22,7 +24,7 @@ namespace DesignPattern
 	{
 		static void Main(string[] args)
 		{
-			DesignPattern_Factory();
+			DesignPattern_ProtoType();
 		}
 
 		#region Grammar
@@ -63,6 +65,11 @@ namespace DesignPattern
 		#endregion
 
 		#region Patterns
+		public static void DesignPattern_ProtoType()
+		{
+			ICloneableBad.Test();
+			DeepCopy.Test();
+		}
 
 		public static void DesignPattern_Factory()
 		{
