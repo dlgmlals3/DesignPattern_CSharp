@@ -13,6 +13,7 @@ using DesignPatterns.Factory.OCP;
 using DesignPatterns.Factory.Assignment;
 using DesignPatterns.ProtoType;
 using DesignPatterns.ProtoType.DeepCopy;
+using DesignPatterns.ProtoType.Inheritance;
 
 using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
@@ -69,6 +70,7 @@ namespace DesignPattern
 		{
 			ICloneableBad.Test();
 			DeepCopy.Test();
+			Inheritance.Test();
 		}
 
 		public static void DesignPattern_Factory()
