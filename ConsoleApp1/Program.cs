@@ -16,6 +16,7 @@ using DesignPatterns.ProtoType.DeepCopy;
 using DesignPatterns.ProtoType.Inheritance;
 using DesignPatterns.ProtoType.Interface;
 using DesignPatterns.ProtoType.Serialization;
+using DesignPatterns.ProtoType.AssignMent;
 
 using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
@@ -75,6 +76,7 @@ namespace DesignPattern
 			Inheritance.Test();
 			ProtoTypeInterface.Test();
 			Serialization.Test();
+			AssignMent.Test();
 		}
 
 		public static void DesignPattern_Factory()
