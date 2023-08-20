@@ -14,6 +14,8 @@ using DesignPatterns.Factory.Assignment;
 using DesignPatterns.ProtoType;
 using DesignPatterns.ProtoType.DeepCopy;
 using DesignPatterns.ProtoType.Inheritance;
+using DesignPatterns.ProtoType.Interface;
+using DesignPatterns.ProtoType.Serialization;
 
 using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
@@ -71,6 +73,8 @@ namespace DesignPattern
 			ICloneableBad.Test();
 			DeepCopy.Test();
 			Inheritance.Test();
+			ProtoTypeInterface.Test();
+			Serialization.Test();
 		}
 
 		public static void DesignPattern_Factory()
