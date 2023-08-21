@@ -17,6 +17,8 @@ using DesignPatterns.ProtoType.Inheritance;
 using DesignPatterns.ProtoType.Interface;
 using DesignPatterns.ProtoType.Serialization;
 using DesignPatterns.ProtoType.AssignMent;
+using DesignPatterns.Singleton;
+using DesignPatterns.Singleton.Issue;
 
 using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
@@ -28,7 +30,7 @@ namespace DesignPattern
 	{
 		static void Main(string[] args)
 		{
-			DesignPattern_ProtoType();
+			DesignPattern_SingleTon();
 		}
 
 		#region Grammar
@@ -69,6 +71,12 @@ namespace DesignPattern
 		#endregion
 
 		#region Patterns
+		public static void DesignPattern_SingleTon()
+		{
+			SingleTon.Test();
+			SingleTonIssue.Test();
+		}
+
 		public static void DesignPattern_ProtoType()
 		{
 			ICloneableBad.Test();

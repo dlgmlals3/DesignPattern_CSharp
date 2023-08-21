@@ -5,4 +5,16 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="DesignPatterns\Singleton\capitals.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="DesignPatterns\Singleton\capitals.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.13.3" />
+  </ItemGroup>
+
 </Project>
