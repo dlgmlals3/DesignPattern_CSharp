@@ -24,16 +24,35 @@ using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
 using Grammar.LINQ;
 using Grammar.Generic;
+using Grammar.Collections.List;
+using Grammar.Collections.Dictionary;
+using Grammar.Collections.SortedList;
+using Grammar.Collections.HashTable;
+using Grammar.Collections.IEnumerableCollection;
+using Grammar.Collections.CustomCollection;
+using Grammar.Collections.GenericCustomCollection;
+
 namespace DesignPattern
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			DesignPattern_SingleTon();
+			Grammar_Collection();
 		}
 
 		#region Grammar
+
+		public static void Grammar_Collection()
+		{
+			ListCollection.Test();
+			DictionaryCollection.Test();
+			SortedListCollection.Test();
+			HashtableCollection.Test();
+			IEnumerableCollection.Test();
+			CustomCollection.Test();
+			GenericCustomCollection.Test();
+		}
 		public static void Grammar_Generic()
 		{
 			Generic.Test();
