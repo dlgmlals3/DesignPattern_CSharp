@@ -33,6 +33,8 @@ using Grammar.Collections.CustomCollection;
 using Grammar.Collections.GenericCustomCollection;
 using Grammar.Collections.ICollectionE;
 using Grammar.Collections.IListE;
+using Grammar.Collections.IEquatableExample;
+using Grammar.Collections.IComparableExample;
 
 namespace DesignPattern
 {
@@ -56,6 +58,8 @@ namespace DesignPattern
 			GenericCustomCollection.Test();
 			ICollectionE.Test();
 			IListE.Test();
+			IEquatableExample.Test();
+			IComparableExample.Test();
 		}
 		public static void Grammar_Generic()
 		{

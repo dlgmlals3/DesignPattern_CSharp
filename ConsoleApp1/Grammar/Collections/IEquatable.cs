@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Grammar.Collections.IListE
+namespace Grammar.Collections.IEquatableExample
 {
 	public enum TypeOfCustomer
 	{
@@ -10,12 +10,18 @@ namespace Grammar.Collections.IListE
 		VIPCustomer
 	}
 
-	public class Customer
+	public class Customer : IEquatable<Customer>
 	{
 		public string CustomerID { get; set; }
 		public string CustomerName { get; set; }
 		public string Email { get; set; }
 		public TypeOfCustomer CustomerType { get; set; }
+
+		public bool Equals(Customer other)
+		{
+			return this.CustomerID == other.CustomerID && this.CustomerName == other.CustomerName
+				&& this.Email == other.Email && this.CustomerType == CustomerType;
+		}
 
 		public override string ToString()
 		{
@@ -80,6 +86,11 @@ namespace Grammar.Collections.IListE
 			customers.Clear();
 		}
 
+		/// <summary>
+		/// Contains는 내부적으로 Equals 호출
+		/// </summary>
+		/// <param name="item"></param>
+		/// <returns></returns>
 		public bool Contains(Customer item)
 		{
 			return customers.Contains(item);
@@ -135,46 +146,32 @@ namespace Grammar.Collections.IListE
 		}
 	}
 
-	public static class IListE
+	public static class IEquatableExample
 	{
 		public static void Test()
 		{
-			Console.WriteLine("\n IListE");
 			CustomersList customersList = new CustomersList()
-		{
-			new Customer() {
-				CustomerID ="A101", CustomerName = "heemin", Email = "dlgmlals3@naver.com", CustomerType = TypeOfCustomer.RegularCustomer
-			},
-			new Customer() {
-				CustomerID ="A102", CustomerName = "heesun", Email = "heesun@naver.com", CustomerType = TypeOfCustomer.RegularCustomer
-			},
-			new Customer() {
-				CustomerID ="A103", CustomerName = "jihayng", Email = "jihayng@naver.com", CustomerType = TypeOfCustomer.VIPCustomer
-			},
-		};
-			Customer new_cust = new Customer()
 			{
-				CustomerID = "A104",
-				CustomerName = "khyngsook",
-				Email = "khyngsook@naver.com",
-				CustomerType = TypeOfCustomer.RegularCustomer
+				new Customer() {
+					CustomerID ="A101", CustomerName = "heemin", Email = "dlgmlals3@naver.com", CustomerType = TypeOfCustomer.RegularCustomer
+				},
+				new Customer() {
+					CustomerID ="A102", CustomerName = "heesun", Email = "heesun@naver.com", CustomerType = TypeOfCustomer.RegularCustomer
+				},
+				new Customer() {
+					CustomerID ="A103", CustomerName = "jihayng", Email = "jihayng@naver.com", CustomerType = TypeOfCustomer.VIPCustomer
+				},
 			};
-			customersList.Add(new_cust);
+			var jihyang = new Customer()
+			{
+				CustomerID = "A103",
+				CustomerName = "jihayng",
+				Email = "jihayng@naver.com",
+				CustomerType = TypeOfCustomer.VIPCustomer
+			};
+			//customersList.Add(jihyang);
 
-			IEnumerator enumerator = customersList.GetEnumerator();
-
-			var node = customersList.Find(value => value.CustomerID == "A104");
-			Console.WriteLine("Index OF : " + customersList.IndexOf(node));
-
-			customersList.Insert(0, node);
-			Console.WriteLine("Insert");
-			Console.WriteLine(string.Join("\n", customersList));
-			Console.WriteLine("Remove 0 ");
-			customersList.RemoveAt(0);
-			Console.WriteLine(string.Join("\n", customersList));
-
-			Console.WriteLine("indexer 0 " + customersList[0]);
+			Console.WriteLine("Contains : " + customersList.Contains(jihyang));
 		}
 	}
 }
-
