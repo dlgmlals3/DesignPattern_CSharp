@@ -31,6 +31,8 @@ using Grammar.Collections.HashTable;
 using Grammar.Collections.IEnumerableCollection;
 using Grammar.Collections.CustomCollection;
 using Grammar.Collections.GenericCustomCollection;
+using Grammar.Collections.ICollectionE;
+using Grammar.Collections.IListE;
 
 namespace DesignPattern
 {
@@ -52,6 +54,8 @@ namespace DesignPattern
 			IEnumerableCollection.Test();
 			CustomCollection.Test();
 			GenericCustomCollection.Test();
+			ICollectionE.Test();
+			IListE.Test();
 		}
 		public static void Grammar_Generic()
 		{
