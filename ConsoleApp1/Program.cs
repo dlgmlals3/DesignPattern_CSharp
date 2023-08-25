@@ -35,7 +35,8 @@ using Grammar.Collections.ICollectionE;
 using Grammar.Collections.IListE;
 using Grammar.Collections.IEquatableExample;
 using Grammar.Collections.IComparableExample;
-
+using Grammar.Collections.Contraraiance;
+using Grammar.Collections.Covariance;
 namespace DesignPattern
 {
 	class Program
@@ -60,6 +61,9 @@ namespace DesignPattern
 			IListE.Test();
 			IEquatableExample.Test();
 			IComparableExample.Test();
+			Covariance.Test();
+			Contravariance.Test();
+			
 		}
 		public static void Grammar_Generic()
 		{
