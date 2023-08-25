@@ -52,8 +52,7 @@ namespace DesignPattern
 		{
 			ListCollection.Test();
 			DictionaryCollection.Test();
-			SortedListCollection.Test();
-			HashtableCollection.Test();
+			
 			IEnumerableCollection.Test();
 			CustomCollection.Test();
 			GenericCustomCollection.Test();
@@ -63,7 +62,9 @@ namespace DesignPattern
 			IComparableExample.Test();
 			Covariance.Test();
 			Contravariance.Test();
-			
+			SortedListCollection.Test();
+			HashtableCollection.Test();
+
 		}
 		public static void Grammar_Generic()
 		{
