@@ -19,6 +19,7 @@ using DesignPatterns.ProtoType.Serialization;
 using DesignPatterns.ProtoType.AssignMent;
 using DesignPatterns.Singleton;
 using DesignPatterns.Singleton.Issue;
+using DesignPatterns.Singleton.Monostate;
 
 using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
@@ -37,13 +38,18 @@ using Grammar.Collections.IEquatableExample;
 using Grammar.Collections.IComparableExample;
 using Grammar.Collections.Contraraiance;
 using Grammar.Collections.Covariance;
+using Grammar.Collections.ArrayListExam;
+using Grammar.Collections.CollectionOfObject;
+using Grammar.Collections.IEnumeratorAndYield;
+using Grammar.Collections.Assignments;
+
 namespace DesignPattern
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			Grammar_Collection();
+			DesignPattern_SingleTon();
 		}
 
 		#region Grammar
@@ -64,6 +70,14 @@ namespace DesignPattern
 			Contravariance.Test();
 			SortedListCollection.Test();
 			HashtableCollection.Test();
+			ArrayListExam.Test();
+			//CollectionOfObject.Test();
+			CollectionOfObject.Test2();
+			IEnumeratorAndYield.Test();
+			new FirstAssignments().Test();
+			new SecondAssignments().Test();
+
+
 
 		}
 		public static void Grammar_Generic()
@@ -107,6 +121,7 @@ namespace DesignPattern
 		{
 			SingleTon.Test();
 			SingleTonIssue.Test();
+			Monostate.Test();
 		}
 
 		public static void DesignPattern_ProtoType()
