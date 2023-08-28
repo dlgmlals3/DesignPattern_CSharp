@@ -51,12 +51,22 @@ namespace Grammar.Collections.Assignments
 			public string Title;
 			public int ISBN;
 
+			public void Borrow()
+			{
+				throw new NotImplementedException();
+			}
+
 			public int LoanPeriod()
 			{
 				return 21;
 			}
 
 			public void Print()
+			{
+				throw new NotImplementedException();
+			}
+
+			public void Retrun()
 			{
 				throw new NotImplementedException();
 			}
@@ -68,12 +78,22 @@ namespace Grammar.Collections.Assignments
 			public string Title;
 			public int LengthInMinutes;
 
+			public void Borrow()
+			{
+				throw new NotImplementedException();
+			}
+
 			public int LoanPeriod()
 			{
 				return 7;
 			}
 
 			public void Print()
+			{
+				throw new NotImplementedException();
+			}
+
+			public void Retrun()
 			{
 				throw new NotImplementedException();
 			}
@@ -84,6 +104,11 @@ namespace Grammar.Collections.Assignments
 			public string Title;
 			public int NumberOfTrakcs;
 
+			public void Borrow()
+			{
+				throw new NotImplementedException();
+			}
+
 			public int LoanPeriod()
 			{
 				return 14;
@@ -93,10 +118,15 @@ namespace Grammar.Collections.Assignments
 			{
 				throw new NotImplementedException();
 			}
+
+			public void Retrun()
+			{
+				throw new NotImplementedException();
+			}
 		}
 		public class Library 
 		{
-			private List<>
+			//private List<>
 		}
 		public void Test()
 		{

@@ -20,6 +20,8 @@ using DesignPatterns.ProtoType.AssignMent;
 using DesignPatterns.Singleton;
 using DesignPatterns.Singleton.Issue;
 using DesignPatterns.Singleton.Monostate;
+using DesignPatterns.DesignPatterns.PerThreadSingleton;
+using DesignPattern.DesignPatterns.Singleton.Ambient;
 
 using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
@@ -122,6 +124,8 @@ namespace DesignPattern
 			SingleTon.Test();
 			SingleTonIssue.Test();
 			Monostate.Test();
+			SingletonWithTrhead.Test();
+			Ambient.Test();
 		}
 
 		public static void DesignPattern_ProtoType()

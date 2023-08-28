@@ -200,7 +200,7 @@ namespace DesignPatterns.Singleton.Issue
 			test.IsSingleTonTest();
 			test.SingletonTotalPopulationTest();
 			test.ConfigurablePopulationTest();
-			test.DIPopulationTest();
+			//test.DIPopulationTest();
 		}
 
 	}
