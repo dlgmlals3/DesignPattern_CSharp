@@ -22,6 +22,7 @@ using DesignPatterns.Singleton.Issue;
 using DesignPatterns.Singleton.Monostate;
 using DesignPatterns.DesignPatterns.PerThreadSingleton;
 using DesignPattern.DesignPatterns.Singleton.Ambient;
+using DesignPatterns.DesignPatterns.Adaptor;
 
 using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
@@ -51,7 +52,7 @@ namespace DesignPattern
 	{
 		static void Main(string[] args)
 		{
-			DesignPattern_SingleTon();
+			DesignPattern_Adaptor();
 		}
 
 		#region Grammar
@@ -119,6 +120,11 @@ namespace DesignPattern
 		#endregion
 
 		#region Patterns
+		public static void DesignPattern_Adaptor()
+		{
+			Adapter.Test();
+		}
+
 		public static void DesignPattern_SingleTon()
 		{
 			SingleTon.Test();
