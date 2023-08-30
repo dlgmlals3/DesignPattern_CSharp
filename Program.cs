@@ -45,6 +45,7 @@ using Grammar.Collections.ArrayListExam;
 using Grammar.Collections.CollectionOfObject;
 using Grammar.Collections.IEnumeratorAndYield;
 using Grammar.Collections.Assignments;
+using Grammar.GarbageCollect;
 
 namespace DesignPattern
 {
@@ -122,7 +123,8 @@ namespace DesignPattern
 		#region Patterns
 		public static void DesignPattern_Adaptor()
 		{
-			Adapter.Test();
+			//Adapter.Test();
+			new GarbageCollectTest().Test();
 		}
 
 		public static void DesignPattern_SingleTon()

@@ -134,7 +134,7 @@ namespace DesignPatterns.DesignPatterns.Adaptor
 
 		internal void ForEach(Action<Point> drawPoint)
 		{
-            drawPoint();
+            //drawPoint();
 		}
 	}
 

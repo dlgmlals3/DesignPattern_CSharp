@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace DesignPattern.DesignPatterns.Singleton.Ambient
 {
-	// dlgmlals3 sealed IDisposable 다시 공부
+	/// <summary>
+	/// sealed 클래스는 BuildingContext를 다른 class에서 상속할수 없음.
+	/// selaed 메소드로 정의하면, 
+	/// 해당 메소드를 포함한 클래스를 다른 class에서 상속은 가능하지만,
+	/// selaed 메소드는 override가 불가능.	
+	/// virtual 메소드와 sealed 메소드는 반대의 개념..
+	/// 
+	/// Dispose 함수를 소멸자처럼 사용해서, 
+	/// 생성자에 push 구분, Dispose() 에서 pop()을 통해 항상 stck에는 this 객체가 
+	/// 있음을 보장한다.
+	/// </summary>
 	public sealed class BuildingContext : IDisposable
 	{
 		public int WallHeight;
