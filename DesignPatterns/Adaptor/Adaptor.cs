@@ -134,8 +134,13 @@ namespace DesignPatterns.DesignPatterns.Adaptor
 
 		internal void ForEach(Action<Point> drawPoint)
 		{
-            //drawPoint();
-		}
+            /*while (GetEnumerator().MoveNext())
+			{
+                drawPoint(GetEnumerator().Current);
+            }*/
+            GetEnumerator().MoveNext();
+            drawPoint(GetEnumerator().Current);
+        }
 	}
 
     public static class Adapter
@@ -169,7 +174,8 @@ namespace DesignPatterns.DesignPatterns.Adaptor
         }
         public static void Test()
 		{
-            Draw();
+            Console.WriteLine("\n Adaptor Test");
+			Draw();
         }
     }
 }

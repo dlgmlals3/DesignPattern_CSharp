@@ -4,6 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// Delegate는 하나이상의 메소드의 레퍼런스를 저장할수 있는 레퍼런스 오브젝트..
+/// Delegate는 이벤트를 생성하기 위해 블록{ } 을 생성한다.
+/// 내부적으로 Delegate도 class 임.
+/// 장점은 이벤트 핸들러 사용할때 효과적이다.
+/// 
+/// </summary>
 namespace Grammar.Delegation
 {
 	public class Sample
@@ -48,8 +55,13 @@ namespace Grammar.Delegation
 			Console.WriteLine(myDeleagte.Invoke(30, 40));
 		}
 
+		public delegate void MyDelegateType3(int a, int b);
 		public delegate void MyDelegateType2(double a, double b);
-		public static void MultiTest()
+		
+		/// <summary>
+		/// 멀티 델리게이트의 경우 인풋은 상관없지만, 리턴타입은 void 입니다.
+		/// </summary>
+		public static void MultiDelegateTest()
 		{
 			// create object of sample
 			Sample s = new Sample();
@@ -66,9 +78,8 @@ namespace Grammar.Delegation
 			// invoke both target methods Add method, and multiply method
 			// add2, multiply method are executed orderly...
 			// in caseof multi delegate, parameter is same, no return value
-			myDelegate.Invoke(40, 10);
-
-			Console.ReadKey();
+			myDelegate.Invoke(40, 10); 
+			// result : Addition is 50, Multiplication is 400
 		}
 	}
 }

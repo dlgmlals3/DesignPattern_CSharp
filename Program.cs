@@ -23,6 +23,8 @@ using DesignPatterns.Singleton.Monostate;
 using DesignPatterns.DesignPatterns.PerThreadSingleton;
 using DesignPattern.DesignPatterns.Singleton.Ambient;
 using DesignPatterns.DesignPatterns.Adaptor;
+using DesignPattern_Csharp.DesignPatterns.Adaptor;
+using DesignPattern_Csharp.DesignPatterns.Adaptor.Assignment;
 
 using Grammar.Delegation.Publisher;
 using Grammar.Delegation;
@@ -105,8 +107,11 @@ namespace DesignPattern
 
 		public static void Grammar_EventTest() {
 			DelegateGrammar.Test();
-			DelegateGrammar.MultiTest();
-			EventTest.Test();
+			DelegateGrammar.MultiDelegateTest();
+			EventTest.EventPublisherTest();
+			EventTest.AutoCreatedPublisherTest();
+
+
 			EventTest.AnonymouseTest();
 			EventTest.LamdaTest();
 			EventTest.InlineLambdaTest();
@@ -116,15 +121,17 @@ namespace DesignPattern
 			new EventTest().EventHandlerTest();
 			new ExpressionGrammar().ExpressionTest();
 			new ExpressionGrammar().ExpressionBodyTest();
-			new SwitchExpression().Test();
 		}
 		#endregion
 
 		#region Patterns
 		public static void DesignPattern_Adaptor()
 		{
-			//Adapter.Test();
+			Adapter.Test();
 			new GarbageCollectTest().Test();
+			GenericValueAdaptor.Test();
+			Editor.DependancyAdaptor.Test();
+			AdaptorAssignment.Test();
 		}
 
 		public static void DesignPattern_SingleTon()
